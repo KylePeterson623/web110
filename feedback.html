@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Shelbie Peterson | 5/9/2026 | Page 3/3 for HTML Final Project-->
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elder Scrolls Information - Feedback</title>
+    <link rel="stylesheet" href="stylesFinal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div>
+        <header>
+            <a href="final.html"><h1>The Elder Scrolls (1994-Now)</h1></a>
+        </header>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="final.html" class="silkscreen">Home</a>
+                </li>
+                <li>
+                    <p>|</p>
+                </li>
+                <li>
+                    <a href="sidegames.html" class="silkscreen">Side Games</a>
+                </li>
+                <li>
+                    <p>|</p>
+                </li>
+                <li class="current">
+                    <a href="feedback.html" class="silkscreen">Feedback</a>
+                </li>
+            </ul>
+        </nav>
+
+        <section>
+                <h2>
+                    If you have the time, please fill out the short questionairre form below!
+                    <br><br>
+                    Your input is very helpful for the continued learning and development of this website
+                </h2>
+        </section>
+
+        <main class="container">
+        <form method="post">
+        <div class="form-group">
+            <h3>Feedback</h3>
+          <button type="reset">Reset</button>
+        </div>
+      <section>
+        <div class="form-group">
+            <h4><label>How would you rate this website?</label></h4>
+            <div class="radio-rating">
+                <input type="radio" id="rateOne" name="rating" value="1 star" required="">
+                <label for="rateOne">1</label>
+                <input type="radio" id="rateTwo" name="rating" value="2 stars">
+                <label for="rateTwo">2</label>
+                <input type="radio" id="rateThree" name="rating" value="3 stars">
+                <label for="rateThree">3</label>
+                <input type="radio" id="rateFour" name="rating" value="4 stars">
+                <label for="rateFour">4</label>
+                <input type="radio" id="rateFive" name="rating" value="5 stars">
+                <label for="rateFive">5</label>
+            </div>
+        </div>
+        </section>
+
+        <section>
+        <div class="form-group">
+            <h4><label>Did you learn anything new here?</label></h4>
+            <div class="radio-boolean">
+                <input type="radio" id="Yes" name="booleanLearn" value="Learned" required="">
+                <label for="Yes">Yes</label>
+                <input type="radio" id="No" name="booleanLearn" value="Didn't Learn">
+                <label for="No">No</label>
+            </div>
+        </div>
+        </section>
+        <section>
+        <div class="check-group">
+            <h4><label>Is there any other information you would like included for each game?</label></h4>
+            <div class="checklist">
+            <input type="checkbox" id="info1" name="info1" value="Writer">
+            <label for="info1">Writer</label>
+
+            <input type="checkbox" id="info2" name="info2" value="Composer">
+            <label for="info2">Composer</label>
+
+            <input type="checkbox" id="info3" name="info3" value="Producer(s)">
+            <label for="info3">Producer(s)</label>
+
+            <input type="checkbox" id="info4" name="info4" value="Developer">
+            <label for="info4">Developer</label>
+            </div>
+        </div>
+        </section>
+        <section>
+        <div class="form-group">
+            <h4><label for="favchar">Do you have a favorite Elder Scrolls character? Who are they?</label></h4>
+            <input type="text" id="favchar" name="favchar" placeholder="Glarthir" maxlength="30">
+        </div>
+        </section>
+        <section>
+        <div class="form-group">
+            <h4><label for="learnMore">Want to let me know about something more specific? Please put it in the box below:</label></h4>
+            <textarea id="learnMore" name="learnMore" maxlength="500"></textarea>
+        </div>
+        </section>
+
+        <div class="form-group">
+          <button type="submit">Submit</button>
+        </div>
+        </form>
+
+        </main>
+        <footer>
+            <p>Additional information on the franchise, as well as non-mainline entries in the series can be found on <a href="https://www.wikipedia.org/">Wikipedia</a>, specifically at the <a href="https://en.wikipedia.org/wiki/The_Elder_Scrolls">Elder Scrolls Wikipedia page</a>. For questions about this website or anything else nerdy, <a href="mailto:kpeter94@stumail.jccc.edu">E-mail me!</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>

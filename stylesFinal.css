@@ -1,0 +1,306 @@
+/* Shelbie Peterson CSS for HTML Final Project */
+/* 5/9/2026 */
+
+
+/* Makes it so that the padding and border are included in the calculation for width and height for
+every element on every webpage */
+*{
+    box-sizing: border-box;
+}
+
+/* Adds a looping stone texture to the background of the entire page while also
+setting the default font color throughout the webpage to white and font style
+to sans serif. A default background color is also provided for cases where the
+stone texture is either missing or unable to load for whatever reason */
+body{
+    background: #3f4047;
+    background-image: url("stone.jpg");
+    font-family: sans-serif;
+    color: #fff;
+    line-height: 1.6;
+    background-color: #f0f8ff;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* Makes all sections dark and slightly transparent, with a colored
+and rounded border */
+section{
+    background-color: #2d3036cb;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    border: 2px solid #999466;
+    border-radius: 8px;
+}
+
+/* Gives the horizontal navigation bar a color to distinguish it
+from the rest of the page */
+nav{
+    background-color: #999466;
+    padding:.5rem 0;
+}
+
+/* Moves the navigation buttons to the center, and makes their spacing
+dependant on the current screen size */
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Removes the default underlines from the links used as nav buttons
+while also giving them a solid white coloration */
+nav a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Makes items within the paragraph tag also white,
+this is a stylistic choice for the | symbols between navigation buttons */
+nav p{
+    color:#fff;
+    font-size: 1.2rem;
+    padding:0;
+    margin:0%;
+}
+
+/* Re-enables the previously disabled link underlines and
+slightly changes the text color while the mouse is over navigation links */
+nav a:hover{
+    color: #d9e8d8;
+    text-decoration: underline;
+}
+
+/* Creates a class called flex, which is only used for the main tags in
+the index and sidegames pages. This class splits the grid into two repeating
+columns and adds some spacing between them */
+.flex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+/* Causes the first instance of a section tag to span across both columns, rather than being constrained
+to a single one, such as the section tags that come afterwards will be */
+.flex section:first-child {
+    grid-column: span 2;
+}
+
+/* Sets a solid and distinguishable color for the footer, while also centering its text */
+footer{
+    background-color: #3f4047;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: .5rem;
+}
+
+/* Sets the color for links within the footer to something easier to look at than the default */
+footer a{
+    color:lightblue
+}
+
+/* Creates a class called 'current' which is used in the navigation buttons to slightly darken and
+distinguish the buttons leading to the page the user is already currently on */
+.current{
+    background-color: #918946;
+    border-radius: 1px;
+    padding:0;
+    margin:0%;
+}
+
+/* Sets all images to be the same height, and fit more cleanly together */
+img{
+    width: auto;
+    height: 12rem;
+    object-fit: cover;
+}
+
+/* Stylizes the topmost level of headers to use a custom font from google and have semi-transparent backgrounds */
+h1{
+    font-family: 'Pixelify Sans';
+    color:#c4b95d;
+    background-color: #2d3036cb;
+}
+
+/* Removes the default bold lettering provided to headers and lowers the font size. Used for the small text boxes
+at the top of each page */
+h2{
+    font-size: 90%;
+    font-weight: 100;
+}
+
+/* Sets header 3s to be nearly identical to header 1s. This is primarily to make the code structure flow in
+a more human-readable fashion, though the text size also differs slightly */
+h3{
+    font-family: 'Pixelify Sans';
+    color:#c4b95d;
+    background-color: #2d3036cb;
+    font-size: 215%;
+}
+
+/* A class which overrides the font to a custom font from Google, as well as adding color */
+.pixelify-color{
+    font-family: 'Pixelify Sans';
+    font-size: 24px;
+    color:#c4b95d;
+}
+
+/* A class which functions similarly to the class above, though does not add color */
+.pixelify{
+    font-family: 'Pixelify Sans';
+    font-size: 24px;
+}
+
+/* Defines a class which overrides the font to Google's custom font Silkscreen */
+.silkscreen{
+    font-family: 'Silkscreen';
+}
+
+/* Adds a slight border to unordered lists nested within sections, and also uses a custom image as a bullet point for
+each item in these unordered lists. Additionally adds a semi-transparent background, which helps make the box appear
+slightly darker than the background */
+section ul{
+    border: 2px solid #999466;
+    border-radius: 8px;
+    list-style-image: url('questMarker_small.png');
+    background-size: contain;
+    background-color: #2d3036cb;
+}
+
+/* Adds a border and a semi-transparent background for paragraphs within sections. These are used for the
+synopsis of each game */
+section p{
+    border: 2px solid #999466;
+    border-radius: 8px;
+    background-color: #2d3036cb;
+}
+
+/* Creates a class which organizes and centers contents, used for forms
+on the feedback page */
+.form-group {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Creates a class identical to the above class which doesn't have spacing between
+its elements */
+.check-group {
+    display: grid;
+    justify-content: center;
+}
+
+/* Sets labels to be adjacent to selectable checkboxes and radio buttons, as well as
+stylistically bolding their text */
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* creates a class which organizes radio buttons with slight spacing,
+and gives them a custom color when selected */
+.radio-rating {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
+    gap: 2px;
+    accent-color: #999466;
+}
+
+/* Identical to the above class, but makes the buttons slightly larger for the yes/no radio question in
+the feedback form */
+.radio-boolean {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 2px;
+    accent-color: #999466;
+}
+
+/* Creates a class used for main in the feedback form which adds coloration as well as a rounded border
+and clean organization of the contained elements within main */
+.container {
+    border: 2px solid #999466;
+    background-color: #2d3036e3;
+    padding: 20px;
+    border-radius: 2px;
+    box-shadow: 0 0 10px #000;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* Removes the default underlines from all links */
+a {
+    text-decoration: none;
+}
+
+/* Creates a class called checklist, which is used for the checkboxes in the feedback form.
+This class changes the default color of selected checkboxes, while spacing them slightly and
+positioning them to the center of the screen */
+.checklist {
+    accent-color: #999466;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* Adds color to the submit button, and changes
+the cursor to a pointing hand when hovering
+over it */
+button[type="submit"] {
+    background-color: #999466 ;
+    color: whitesmoke ;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Makes the submit button slightly brighter
+and underlines its text when the mouse is hovered
+over it */
+button[type="submit"]:hover {
+     text-decoration: underline;
+     background-color: #a7a171;
+}
+
+/* Adds color to the box and text of the reset button,
+though unlike the submit button it is not padded and does not
+have its edges rounded */
+button[type="reset"] {
+    background-color: #999466 ;
+    color: whitesmoke ;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Similar to the submit button, this underlines the text and makes the button a slightly
+different color when hovered over. Normally, this should be able to be assigned together by
+using button:hover {}, though in testing this for whatever reason didn't work perfectly for the
+reset button */
+button[type="reset"]:hover {
+     text-decoration: underline;
+     background-color: #a7a171;
+}
+
+/* Sets the editable text boxes in the feedback page to be darker and have a slight border, as well
+as setting the color of the text within them to a pure white */
+input[type="text"],textarea {
+    width: 100%;
+    padding: 8px;
+    border: 3px solid #999466;
+    background-color:#3f4047;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color:#fff
+}
+
+/* Slightly darkens the editable text boxes while they're being used */
+input[type=text]:focus,
+select:focus {
+  background-color: #26272b;
+}
